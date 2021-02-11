@@ -8,17 +8,14 @@ const envAlias = process.argv[2];
 const inputFile = process.argv[3];
 const outputFile = process.argv[4];
 
-const lastCommit = proc
-  .execSync('git rev-parse HEAD')
-  .toString()
-  .trim();
-
 // eslint-disable-next-line
 require('dotenv').config({ path: path.resolve(cwd, inputFile) });
 
+const deprecationWarning = "APP MARKED FOR FUTURE DEPRECATION"
+
 const config = {
   element: {
-    commit: lastCommit,
+    commit: deprecationWarning,
     env: envAlias,
     couchdb_remote: process.env.ELEMENT_COUCHDB_REMOTE,
     ipfs: {
