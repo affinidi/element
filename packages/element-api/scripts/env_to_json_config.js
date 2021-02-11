@@ -11,7 +11,7 @@ const outputFile = process.argv[4];
 // eslint-disable-next-line
 require('dotenv').config({ path: path.resolve(cwd, inputFile) });
 
-const deprecationWarning = "APP MARKED FOR FUTURE DEPRECATION"
+const deprecationWarning = 'API MARKED FOR FUTURE DEPRECATION';
 
 const config = {
   element: {
